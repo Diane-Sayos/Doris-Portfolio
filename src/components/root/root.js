@@ -1,7 +1,5 @@
-import { Outlet } from 'react-router-dom';
 
-/** @jsx jsx */
-import { jsx, css, Global, ClassNames } from '@emotion/react'
+import { Outlet } from 'react-router-dom';
 
 
 import Header from '../header/header';
