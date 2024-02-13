@@ -2,6 +2,7 @@
 
 // import { css } from '@emotion/react';
 import { NavLink } from 'react-router-dom';
+import Contact from '../contact/contact';
 
 const styles = {
     '.header-section': {
@@ -29,7 +30,7 @@ const Header = () => {
                 <NavLink to='/' >Home</NavLink>
                 <NavLink to='/about' >About</NavLink>
                 <NavLink to='/projects' >Projects</NavLink>
-                <button>Contact</button>
+                <Contact />
             </nav>
         </section>
     )
