@@ -27,19 +27,6 @@ const style = {
     boxShadow: 24,
     p: 4,
 };
-const BootstrapButton = styled(Button)({
-    boxShadow: 'none',
-    textTransform: 'none',
-    fontSize: 16,
-    fontWeight: 'bolder',
-    padding: '5px',
-    color: '#7f5539',
-    alignSelf: 'center',
-    lineHeight: 1.5,
-    backgroundColor: 'white',
-    borderColor: 'white',
-    fontFamily: "Abel",
-});
 
 const Contact = () => {
     const [name, setName] = useState('')
@@ -108,9 +95,9 @@ const Contact = () => {
             </article>
             <article>
                 <Fragment>
-                    <BootstrapButton onClick={openFormModalHandler} className="navbar-link">
+                    <Button onClick={openFormModalHandler} className="navbar-link">
                         CONTACT
-                    </BootstrapButton>
+                    </Button>
                     <Dialog
                         open={openForm}
                         onClose={closeFormModalHandler}
@@ -176,7 +163,7 @@ const Contact = () => {
                             />
                         </DialogContent>
                         <DialogActions>
-                            <BootstrapButton onClick={closeFormModalHandler}>Cancel</BootstrapButton>
+                            <Button onClick={closeFormModalHandler} sx={{color: '#7f5539'}}>CANCEL</Button>
                             <LoadingButton sx={{color: '#7f5539', borderColor: '#7f5539'}} onClick={(e) => handleSubmit(e)} loading={loading} loadingPosition="center" startIcon={<SendIcon />} variant="outlined">Send Message</LoadingButton>
                         </DialogActions>
                     </Dialog>

@@ -1,8 +1,13 @@
 /** @jsxImportSource @emotion/react */
 
-// import { css } from '@emotion/react';
+import { css } from '@emotion/react';
 import { NavLink } from 'react-router-dom';
 import Contact from '../contact/contact';
+
+import Avatar from '@mui/material/Avatar';
+
+import sample from '../../images/catpic.jpeg';
+
 
 const styles = {
     '.header-section': {
@@ -10,18 +15,42 @@ const styles = {
         top: 0,
         zIndex: 100,
         backgroundColor: 'white',
-        border: '1px solid black',
     },
     '.header': {
-        width: '100%',
-        height: '5rem'
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
     },
     '.navbar-section': {
         display: 'flex',
         justifyContent: 'flex-end',
         padding: '1rem',
         alignItems: 'center',
-    }
+    },
+    '.header-avatar-container': {
+        display: 'flex',
+        justifyContent: 'flex-start',
+        alignItems: 'center',
+        padding: '1rem',
+    },
+    '.avatar-name': {
+        margin: 0,
+        padding: '5px',
+    },
+    '.navbar-link': {
+        boxShadow: 'none',
+        textTransform: 'none',
+        fontSize: 16,
+        fontWeight: 'bolder',
+        padding: '5px',
+        alignSelf: 'center',
+        lineHeight: 1.5,
+        backgroundColor: 'white',
+        fontFamily: "Abel",
+        textDecoration: 'none',
+        color: '#7f5539',
+    },
+    
 }
 
 
@@ -29,15 +58,23 @@ const Header = () => {
     return (
         <section css={[styles?.['.header-section'], styles]} className='header-section'>
             <section className='header'>
-                <h1>Doris Sayos</h1>
-                <p>Data Analyst</p>
+                <div className='header-avatar-container'>
+                <NavLink to='/' ><Avatar alt='Doris Sayos Picture' src={sample} /></NavLink>
+                    <h3 css={css`
+                        @media (max-width: 480px) {
+                            display: none;
+                        }
+                    `}>
+                        <NavLink to='/' className='navbar-link'>DORIS SAYOS</NavLink>
+                    </h3>
+                </div>
+                <nav className='navbar-section'>
+                    <NavLink to='/' className='navbar-link'>HOME</NavLink>
+                    <NavLink to='/about' className='navbar-link'>ABOUT</NavLink>
+                    <NavLink to='/projects' className='navbar-link'>PROJECTS</NavLink>
+                    <Contact />
+                </nav>
             </section>
-            <nav className='navbar-section'>
-                <NavLink to='/' >Home</NavLink>
-                <NavLink to='/about' >About</NavLink>
-                <NavLink to='/projects' >Projects</NavLink>
-                <Contact />
-            </nav>
         </section>
     )
 };
