@@ -16,6 +16,12 @@ const styles = {
         width: '100%',
         height: '5rem'
     },
+    '.navbar-section': {
+        display: 'flex',
+        justifyContent: 'flex-end',
+        padding: '1rem',
+        alignItems: 'center',
+    }
 }
 
 
