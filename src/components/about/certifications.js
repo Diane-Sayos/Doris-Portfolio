@@ -12,13 +12,12 @@ const styles = {
     }
 }
 
-
-const About = () => {
+const Certifications = () => {
     return (
-        <section css={[styles?.['.main-section'], styles]} className='about-section'>
-            <h2>About</h2>
-        </section>
+            <section css={[styles?.['.main-section'], styles]} className='certification-section'>
+                <h2>CERTIFICATIONS</h2>
+            </section>
     )
 };
 
-export default About;
+export default Certifications;

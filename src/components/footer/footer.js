@@ -1,12 +1,5 @@
 /** @jsxImportSource @emotion/react */
 
-//have to add resume and business card later!!
-//update link on github, calendar, email
-
-let resume;
-let businessCard;
-
-
 //material ui
 import Paper from '@mui/material/Paper';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
@@ -16,6 +9,12 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
 import FileCopyIcon from '@mui/icons-material/FileCopy';
+
+//have to add resume and business card later!!
+//update link on github, calendar, email
+
+let resume;
+let businessCard;
 
 
 const styles = {

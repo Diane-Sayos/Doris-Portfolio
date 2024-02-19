@@ -13,7 +13,7 @@ import Avatar from '@mui/material/Avatar';
 import Paper from '@mui/material/Paper';
 
 //files
-import sample from '../../images/catpic.jpeg';
+import sample from './catpic.jpeg';
 
 
 const styles = {
