@@ -1,13 +1,18 @@
 /** @jsxImportSource @emotion/react */
 
+//dependencies
+import { useState } from 'react';
 import { css } from '@emotion/react';
 import { NavLink } from 'react-router-dom';
+
+//components
 import Contact from '../contact/contact';
 
+//material ui
 import Avatar from '@mui/material/Avatar';
 import Paper from '@mui/material/Paper';
 
-
+//files
 import sample from '../../images/catpic.jpeg';
 
 
@@ -19,12 +24,10 @@ const styles = {
         backgroundColor: 'white',
         borderBottomRightRadius: '1rem 1rem',
         borderBottomLeftRadius: '1rem 1rem',
-    },
-    '.header': {
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
-        margin: '0 1rem',
+        padding: '1rem 1rem',
     },
     '.navbar-section': {
         display: 'flex',
@@ -46,40 +49,46 @@ const styles = {
         boxShadow: 'none',
         textTransform: 'none',
         fontSize: 16,
-        fontWeight: 'bolder',
         padding: 5,
         alignSelf: 'center',
         lineHeight: 1.5,
         backgroundColor: 'white',
-        fontFamily: "Abel",
         textDecoration: 'none',
         color: '#7f5539',
     },
+    '.navbar-link-selected': {
+        backgroundColor: '#7f5539',
+        color: 'white',
+        textDecoration: 'none',
+        borderRadius: 5,
+        padding: 5,
+        fontWeight: 'bolder',
+    }
 }
 
 
 const Header = () => {
+    const [activeNav, setActiveNav] = useState('');
+
     return (
-            <Paper css={[styles?.['.header-section'], styles]} className='header-section' elevation={6}>
-            <section className='header'>
-                <div className='header-avatar-container'>
-                <NavLink to='/' ><Avatar alt='Doris Sayos Picture' src={sample} /></NavLink>
-                    <h3 css={css`
-                        @media (max-width: 480px) {
-                            display: none;
-                        }
-                    `}>
-                        <NavLink to='/' className='navbar-link'>DORIS SAYOS</NavLink>
-                    </h3>
-                </div>
-                <nav className='navbar-section'>
-                    <NavLink to='/' className='navbar-link'>HOME</NavLink>
-                    <NavLink to='/about' className='navbar-link'>ABOUT</NavLink>
-                    <NavLink to='/projects' className='navbar-link'>PROJECTS</NavLink>
-                    <Contact />
-                </nav>
-            </section>
-            </Paper>
+        <Paper css={[styles?.['.header-section'], styles]} className='header-section' elevation={6}>
+            <div className='header-avatar-container'>
+                <NavLink to='/' onClick={() => setActiveNav('/')} ><Avatar alt='Doris Sayos Picture' src={sample} /></NavLink>
+                <h3 css={css`
+                    @media (max-width: 480px) {
+                        display: none;
+                    }
+                `}>
+                    <NavLink to='/' onClick={() => setActiveNav('/')} className='navbar-link'>DORIS SAYOS</NavLink>
+                </h3>
+            </div>
+            <nav className='navbar-section'>
+                <NavLink to='/' onClick={() => setActiveNav('/')} className={activeNav === '/' ? 'navbar-link-selected' : 'navbar-link'}>HOME</NavLink>
+                <NavLink to='/about' onClick={() => setActiveNav('/about')} className={activeNav === '/about' ? 'navbar-link-selected' : 'navbar-link'}>ABOUT</NavLink>
+                <NavLink to='/projects' onClick={() => setActiveNav('/projects')} className={activeNav === '/projects' ? 'navbar-link-selected' : 'navbar-link'}>PROJECTS</NavLink>
+                <Contact />
+            </nav>
+        </Paper>
     )
 };
 
