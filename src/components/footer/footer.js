@@ -1,7 +1,6 @@
 /** @jsxImportSource @emotion/react */
 
 import Paper from '@mui/material/Paper';
-
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import CallIcon from '@mui/icons-material/Call';
 import CreditCardIcon from '@mui/icons-material/CreditCard';
@@ -9,6 +8,9 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
 import FileCopyIcon from '@mui/icons-material/FileCopy';
+
+let resume; //have to add resume and business card later!!
+let businessCard;
 
 
 const styles = {
@@ -29,12 +31,12 @@ const styles = {
 const Footer = () => {
     return (
         <Paper className='footer-section' css={[styles?.['.footer-section'], styles]}  elevation={6}>
-            <LinkedInIcon fontSize='medium' />
+            <LinkedInIcon fontSize='medium' onClick={() => window.open("https://www.linkedin.com/in/doris-sayos-1743b01bb/", "_blank")} />
             <GitHubIcon fontSize='medium' />
             <EmailIcon fontSize='medium' />
             <CalendarMonthIcon fontSize='medium' />
-            <FileCopyIcon fontSize='medium' />
-            <CreditCardIcon fontSize='medium' />
+            <a href={businessCard} download className="footer-button"><CreditCardIcon fontSize='medium' /></a>
+            <a href={resume} download className="footer-button"><FileCopyIcon fontSize='medium' /></a>
             <CallIcon fontSize='medium' />
         </Paper>
     )
