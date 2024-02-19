@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 
-
+//create cards for each project ----- input image, project title as LINK && description
+//use modal when clicked ---- show sample pictures of project, && project title as LINK && description
 
 const styles = {
     '.main-section': {

@@ -2,6 +2,8 @@
 
 // import { css } from '@emotion/react';
 
+//this is the fun description for doris with hobbies, soft skills, goal
+
 const styles = {
     '.main-section': {
         margin: '1rem auto',
@@ -10,7 +12,7 @@ const styles = {
         border: '1px solid black',
         padding: 10,
     }
-}
+};
 
 
 const About = () => {

@@ -2,6 +2,8 @@
 
 // import { css } from '@emotion/react';
 
+//create cards for tech stacks ---- make sure to add the name of each tech stack
+
 const styles = {
     '.main-section': {
         margin: '1rem auto',

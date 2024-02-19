@@ -2,6 +2,10 @@
 
 // import { css } from '@emotion/react';
 
+//create cards for certifications --- input image && Cert Title && School
+//create modal when clicked --- input bigger picture of the certificate
+
+
 const styles = {
     '.main-section': {
         margin: '1rem auto',
