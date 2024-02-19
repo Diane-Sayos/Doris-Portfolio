@@ -11,7 +11,10 @@ const styles = {
         flexDirection: 'row wrap',
         border: '1px solid black',
         padding: 10,
-    }
+    },
+    '.techstack-section': {
+
+    },
 }
 
 const Techstack = () => {

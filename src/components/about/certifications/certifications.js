@@ -6,9 +6,10 @@
 //components
 import CertCard from './certcard';
 
-//material ui
-import Avatar from '@mui/material/Avatar';
-import Paper from '@mui/material/Paper';
+//material ui --- 
+import ImageList from '@mui/material/ImageList';
+import ImageListItem from '@mui/material/ImageListItem';
+import ListSubheader from '@mui/material/ListSubheader';
 
 //files
 import one from './1.jpeg';
@@ -38,7 +39,10 @@ const styles = {
         flexDirection: 'row wrap',
         border: '1px solid black',
         padding: 10,
-    }
+    },
+    '.certification-section': {
+
+    },
 };
 
 
@@ -118,16 +122,14 @@ const Certifications = () => {
 
     return (
         <section css={[styles?.['.main-section'], styles]} className='certification-section'>
-            <h2>CERTIFICATIONS</h2>
-            <div className="certificates-wrapper">
-                {
-                    certificates.map((certificate) => {
-                        return (
-                            <CertCard certificate={certificate} />
-                        )
-                    })
-                }
-            </div>
+            <ImageList sx={{ width: 500, height: 450 }}>
+                <ImageListItem key="Subheader" cols={2}>
+                    <ListSubheader component="div">CERTIFICATIONS</ListSubheader>
+                </ImageListItem>
+                {certificates.map((certificate) => (
+                    <CertCard certificate={certificate} />
+                ))}
+            </ImageList>
         </section>
     )
 };

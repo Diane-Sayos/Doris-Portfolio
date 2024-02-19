@@ -6,34 +6,57 @@
 //components
 
 
-//material ui
-import Avatar from '@mui/material/Avatar';
+//material ui --
 import Paper from '@mui/material/Paper';
+
+import ImageListItem from '@mui/material/ImageListItem';
+import ImageListItemBar from '@mui/material/ImageListItemBar';
+import IconButton from '@mui/material/IconButton';
+import InfoIcon from '@mui/icons-material/Info';
 
 //files
 
 
 //create cards for certifications --- input image && Cert Title && School
-//create modal when clicked --- input bigger picture of the certificate
+//create modal when INFO ICON || IMAGE is clicked --- input bigger picture of the certificate
 
 const styles = {
-    '.main-section': {
-        margin: '1rem auto',
-        display: 'flex',
-        flexDirection: 'row wrap',
-        border: '1px solid black',
-        padding: 10,
+    '.certcard-section': {
+
     }
 };
 
 const CertCard = ({certificate}) => {
     return (
-        <section className='certcard-section'>
-            <img src={certificate.picture} />
-            <h3>{certificate.title}</h3>
-            <p>{certificate.school}</p>
-        </section>
+        <Paper className='certcard-section' elevation={3}>
+            <ImageListItem key={certificate.picture}>
+                <img
+                    srcSet={`${certificate.picture}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                    src={`${certificate.picture}?w=248&fit=crop&auto=format`}
+                    alt={certificate.title}
+                    loading="lazy"
+                />
+                <ImageListItemBar
+                    title={certificate.title}
+                    subtitle={certificate.school}
+                    actionIcon={
+                        <IconButton
+                            sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
+                            aria-label={`Info about ${certificate.title}.`}
+                        >
+                            <InfoIcon />
+                        </IconButton>
+                    }
+                />
+            </ImageListItem>
+        </Paper>
     )
 };
 
 export default CertCard;
+
+{/* <section className='certcard-section'>
+<img src={certificate.picture} />
+<h3>{certificate.title}</h3>
+<p>{certificate.school}</p>
+</section> */}

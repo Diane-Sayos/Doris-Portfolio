@@ -163,7 +163,7 @@ const Contact = () => {
                         </DialogContent>
                         <DialogActions>
                             <Button onClick={closeFormModalHandler} sx={{color: '#7f5539'}}>CANCEL</Button>
-                            <LoadingButton sx={{color: '#7f5539', borderColor: '#7f5539'}} onClick={(e) => handleSubmit(e)} loading={loading} loadingPosition="center" startIcon={<SendIcon />} variant="outlined">Send Message</LoadingButton>
+                            <LoadingButton sx={{color: '#7f5539', borderColor: '#7f5539'}} onClick={(e) => handleSubmit(e)} loading={loading} loadingPosition="center" startIcon={<SendIcon />} variant="outlined">SEND MESSAGE</LoadingButton>
                         </DialogActions>
                     </Dialog>
                 </Fragment>

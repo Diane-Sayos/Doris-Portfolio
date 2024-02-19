@@ -9,7 +9,6 @@ import { NavLink } from 'react-router-dom';
 
 
 //material ui
-import Avatar from '@mui/material/Avatar';
 import Paper from '@mui/material/Paper';
 
 //files
