@@ -33,15 +33,9 @@ import fourteen from './14.jpeg';
 
 
 const styles = {
-    '.main-section': {
-        margin: '1rem auto',
-        display: 'flex',
-        flexDirection: 'row wrap',
-        border: '1px solid black',
-        padding: 10,
-    },
     '.certification-section': {
-
+        textAlign: 'center',
+        padding: '1rem 1rem 3rem 1rem'
     },
 };
 
@@ -55,8 +49,8 @@ const Certifications = () => {
         },
         {
             picture: two,
-            title: "MongoDB Basics",
-            school: "MongoDB University"
+            title: "Feature Engineering with PySpark",
+            school: "datacamp"
         },
         {
             picture: three,
@@ -115,17 +109,14 @@ const Certifications = () => {
         },
         {
             picture: fourteen,
-            title: "Feature Engineering with PySpark",
-            school: "datacamp"
+            title: "MongoDB Basics",
+            school: "MongoDB University"
         }
     ];
 
     return (
-        <section css={[styles?.['.main-section'], styles]} className='certification-section'>
-            <ImageList sx={{ width: 500, height: 450 }}>
-                <ImageListItem key="Subheader" cols={2}>
-                    <ListSubheader component="div">CERTIFICATIONS</ListSubheader>
-                </ImageListItem>
+        <section css={[styles?.['.certification-section'], styles]} className='certification-section'>
+            <ImageList sx={{ width: '100%', height: '80vh' }} gap={10}>
                 {certificates.map((certificate) => (
                     <CertCard certificate={certificate} />
                 ))}

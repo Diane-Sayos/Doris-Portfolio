@@ -1,6 +1,13 @@
 /** @jsxImportSource @emotion/react */
 
+//dependencies
 // import { css } from '@emotion/react';
+
+//components
+
+//material ui
+
+//files
 
 //create cards for tech stacks ---- make sure to add the name of each tech stack
 
@@ -20,7 +27,7 @@ const styles = {
 const Techstack = () => {
     return (
             <section css={[styles?.['.main-section'], styles]} className='techstack-section'>
-                <h2>Home</h2>
+                <h2>techstack</h2>
             </section>
     )
 };

@@ -22,12 +22,10 @@ const styles = {
         top: 0,
         zIndex: 100,
         backgroundColor: 'white',
-        borderBottomRightRadius: '1rem 1rem',
-        borderBottomLeftRadius: '1rem 1rem',
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
-        padding: '1rem 1rem',
+        padding: '0.5rem 0.5rem',
     },
     '.navbar-section': {
         display: 'flex',
@@ -68,7 +66,7 @@ const styles = {
 
 
 const Header = () => {
-    const [activeNav, setActiveNav] = useState('');
+    const [activeNav, setActiveNav] = useState('/');
 
     return (
         <Paper css={[styles?.['.header-section'], styles]} className='header-section' elevation={6}>

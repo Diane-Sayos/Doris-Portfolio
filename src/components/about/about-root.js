@@ -1,5 +1,6 @@
+//dependencies
 import { Outlet } from 'react-router-dom';
-
+//components
 import Subheader from './subheader';
 
 

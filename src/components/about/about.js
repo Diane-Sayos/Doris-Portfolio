@@ -1,6 +1,12 @@
 /** @jsxImportSource @emotion/react */
-
+//dependencies
 // import { css } from '@emotion/react';
+
+//components
+
+//material ui
+
+//files
 
 //this is the fun description for doris with hobbies, soft skills, goal
 

@@ -2,7 +2,7 @@
 
 //dependencies
 import { useState } from 'react';
-import { css } from '@emotion/react';
+// import { css } from '@emotion/react';
 import { NavLink } from 'react-router-dom';
 
 //components
@@ -17,19 +17,17 @@ import Paper from '@mui/material/Paper';
 const styles = {
     '.header-section': {
         position: 'sticky',
-        top: '4rem',
+        top: '1rem',
         zIndex: 100,
         backgroundColor: 'white',
-        borderBottomRightRadius: '1rem 1rem',
-        borderBottomLeftRadius: '1rem 1rem',
+        borderBottomRightRadius: '1rem 0.5rem',
+        borderBottomLeftRadius: '1rem 0.5rem',
         display: 'flex',
         flexDirection: 'row',
-        justifyContent: 'space-between',
-        padding: '1rem 1rem',
+        justifyContent: 'flex-end',
+        padding: '0.5rem 0.5rem',
     },
     '.navbar-section': {
-        display: 'flex',
-        justifyContent: 'flex-end',
         padding: 0,
         alignItems: 'center',
     },
@@ -56,14 +54,14 @@ const styles = {
 
 
 const Subheader = () => {
-    const [activeNav, setActiveNav] = useState('');
+    const [activeNav, setActiveNav] = useState('/');
 
     return (
         <Paper css={[styles?.['.header-section'], styles]} className='header-section' elevation={6}>
             <nav className='navbar-section'>
-                <NavLink to='/' onClick={() => setActiveNav('/')} className={activeNav === '/' ? 'navbar-link-selected' : 'navbar-link'}>ABOUT</NavLink>
-                <NavLink to='/about' onClick={() => setActiveNav('/certifications')} className={activeNav === '/certifications' ? 'navbar-link-selected' : 'navbar-link'}>CERTIFICATIONS</NavLink>
-                <NavLink to='/about' onClick={() => setActiveNav('/techstack')} className={activeNav === '/techstack' ? 'navbar-link-selected' : 'navbar-link'}>TECH STACK</NavLink>
+                <NavLink to='/about' onClick={() => setActiveNav('/')} className={activeNav === '/' ? 'navbar-link-selected' : 'navbar-link'}>ABOUT</NavLink>
+                <NavLink to='/about/certifications' onClick={() => setActiveNav('/certifications')} className={activeNav === '/certifications' ? 'navbar-link-selected' : 'navbar-link'}>CERTIFICATIONS</NavLink>
+                <NavLink to='/about/techstack' onClick={() => setActiveNav('/techstack')} className={activeNav === '/techstack' ? 'navbar-link-selected' : 'navbar-link'}>TECH STACK</NavLink>
             </nav>
         </Paper>
     )

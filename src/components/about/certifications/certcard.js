@@ -20,18 +20,18 @@ import InfoIcon from '@mui/icons-material/Info';
 //create cards for certifications --- input image && Cert Title && School
 //create modal when INFO ICON || IMAGE is clicked --- input bigger picture of the certificate
 
-const styles = {
-    '.certcard-section': {
+// const styles = {
+//     '.certcard-section': {
 
-    }
-};
+//     }
+// };
 
 const CertCard = ({certificate}) => {
     return (
-        <Paper className='certcard-section' elevation={3}>
-            <ImageListItem key={certificate.picture}>
+        <Paper className='certcard-section' elevation={5}>
+            <ImageListItem key={certificate.title} cols={2}>
                 <img
-                    srcSet={`${certificate.picture}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                    srcSet={`${certificate.picture}?w=248&h=144fit=crop&auto=format&dpr=2 2x`}
                     src={`${certificate.picture}?w=248&fit=crop&auto=format`}
                     alt={certificate.title}
                     loading="lazy"
@@ -54,9 +54,3 @@ const CertCard = ({certificate}) => {
 };
 
 export default CertCard;
-
-{/* <section className='certcard-section'>
-<img src={certificate.picture} />
-<h3>{certificate.title}</h3>
-<p>{certificate.school}</p>
-</section> */}
