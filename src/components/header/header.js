@@ -5,6 +5,8 @@ import { NavLink } from 'react-router-dom';
 import Contact from '../contact/contact';
 
 import Avatar from '@mui/material/Avatar';
+import Paper from '@mui/material/Paper';
+
 
 import sample from '../../images/catpic.jpeg';
 
@@ -15,23 +17,26 @@ const styles = {
         top: 0,
         zIndex: 100,
         backgroundColor: 'white',
+        borderBottomRightRadius: '1rem 1rem',
+        borderBottomLeftRadius: '1rem 1rem',
     },
     '.header': {
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
+        margin: '0 1rem',
     },
     '.navbar-section': {
         display: 'flex',
         justifyContent: 'flex-end',
-        padding: '1rem',
+        padding: 0,
         alignItems: 'center',
     },
     '.header-avatar-container': {
         display: 'flex',
         justifyContent: 'flex-start',
         alignItems: 'center',
-        padding: '1rem',
+        padding: 0,
     },
     '.avatar-name': {
         margin: 0,
@@ -42,7 +47,7 @@ const styles = {
         textTransform: 'none',
         fontSize: 16,
         fontWeight: 'bolder',
-        padding: '5px',
+        padding: 5,
         alignSelf: 'center',
         lineHeight: 1.5,
         backgroundColor: 'white',
@@ -50,13 +55,12 @@ const styles = {
         textDecoration: 'none',
         color: '#7f5539',
     },
-    
 }
 
 
 const Header = () => {
     return (
-        <section css={[styles?.['.header-section'], styles]} className='header-section'>
+            <Paper css={[styles?.['.header-section'], styles]} className='header-section' elevation={6}>
             <section className='header'>
                 <div className='header-avatar-container'>
                 <NavLink to='/' ><Avatar alt='Doris Sayos Picture' src={sample} /></NavLink>
@@ -75,7 +79,7 @@ const Header = () => {
                     <Contact />
                 </nav>
             </section>
-        </section>
+            </Paper>
     )
 };
 

@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 
-// import { css } from '@emotion/react';
+import Paper from '@mui/material/Paper';
 
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import CallIcon from '@mui/icons-material/Call';
@@ -9,8 +9,6 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
 import FileCopyIcon from '@mui/icons-material/FileCopy';
-import FileDownloadIcon from '@mui/icons-material/FileDownload';
-import FileDownloadDoneIcon from '@mui/icons-material/FileDownloadDone';
 
 
 const styles = {
@@ -20,25 +18,25 @@ const styles = {
         right: 0,
         left: 0,
         display: 'flex',
-        justifyContent: 'space-around',
+        justifyContent: 'space-evenly',
         flexDirection: 'row',
-        height: '2rem',
-        padding: 10,
-        border: '1px solid black',
+        borderTopLeftRadius: '1rem 1rem',
+        borderTopRightRadius: '1rem 1rem',
+        padding: '0.5rem 0',
     },
 }
 
 const Footer = () => {
     return (
-        <section css={[styles?.['.footer-section'], styles]} className='footer-section'>
-            <LinkedInIcon />
-            <GitHubIcon />
-            <EmailIcon />
-            <CalendarMonthIcon />
-            <FileCopyIcon />
-            <CreditCardIcon />
-            <CallIcon />
-        </section>
+        <Paper className='footer-section' css={[styles?.['.footer-section'], styles]}  elevation={6}>
+            <LinkedInIcon fontSize='medium' />
+            <GitHubIcon fontSize='medium' />
+            <EmailIcon fontSize='medium' />
+            <CalendarMonthIcon fontSize='medium' />
+            <FileCopyIcon fontSize='medium' />
+            <CreditCardIcon fontSize='medium' />
+            <CallIcon fontSize='medium' />
+        </Paper>
     )
 };
 

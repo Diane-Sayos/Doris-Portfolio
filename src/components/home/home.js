@@ -4,11 +4,11 @@
 
 const styles = {
     '.main-section': {
-        margin: '0 auto',
+        margin: '1rem auto',
         display: 'flex',
         flexDirection: 'row wrap',
-        height: '84vh',
         border: '1px solid black',
+        padding: 10,
     }
 }
 
