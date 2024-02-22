@@ -1,34 +1,20 @@
-/** @jsxImportSource @emotion/react */
-
-//dependencies
-// import { css } from '@emotion/react';
+//create cards for certifications --- input image && Cert Title && School
+//create modal when clicked --- input bigger picture of the certificate
 
 //components
-
-//material ui
-
-//files
-
-//create cards for tech stacks ---- make sure to add the name of each tech stack
-
-const styles = {
-    '.main-section': {
-        margin: '1rem auto',
-        display: 'flex',
-        flexDirection: 'row wrap',
-        border: '1px solid black',
-        padding: 10,
-    },
-    '.techstack-section': {
-
-    },
-}
+import Cards from '../../reusable/cards';
 
 const Techstack = () => {
+    const techstacks = [
+        {
+            title: '',
+            subtitle: '',
+            picture: '',
+            link: ''
+        }
+    ]
     return (
-            <section css={[styles?.['.main-section'], styles]} className='techstack-section'>
-                <h2>techstack</h2>
-            </section>
+            <Cards files={techstacks} category={'techstack'} />
     )
 };
 

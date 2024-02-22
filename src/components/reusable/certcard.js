@@ -10,27 +10,23 @@ import Paper from '@mui/material/Paper';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 
-//files
 
-//styling
-
-
-const CertCard = ({certificate}) => {
+const CertCard = ({file}) => {
 
     return (
         <Paper className='certcard-section' elevation={5}>
-            <ImageListItem key={certificate.title} cols={2}>
+            <ImageListItem key={file.title} cols={2}>
                 <img
-                    srcSet={`${certificate.picture}?w=248&h=144fit=crop&auto=format&dpr=2 2x`}
-                    src={`${certificate.picture}?w=248&fit=crop&auto=format`}
-                    alt={certificate.title}
+                    srcSet={`${file.picture}?w=248&h=144fit=crop&auto=format&dpr=2 2x`}
+                    src={`${file.picture}?w=248&fit=crop&auto=format`}
+                    alt={file.title}
                     loading="lazy"
                 />
                 <ImageListItemBar
-                    title={certificate.title}
-                    subtitle={certificate.school}
+                    title={file.title}
+                    subtitle={file.subtitle}
                     actionIcon={
-                        <CertModal certificate={certificate} />
+                        <CertModal file={file} />
                     }
                 />
             </ImageListItem>

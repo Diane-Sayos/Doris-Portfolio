@@ -1,9 +1,9 @@
 import './App.css';
 //main template --- header, main section, footer
-import Root from './components/root/root';
+import Root from './components/root';
 //components for main section
 import Projects from './components/projects/projects';
-import Home from './components/home/home';
+import Home from './components/home';
 //subheader -- navbar for about section
 import AboutRoot from './components/about/about-root';
 //components for about section

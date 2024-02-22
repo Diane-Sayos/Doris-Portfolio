@@ -25,7 +25,7 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   },
 }));
 
-const CertModal = ({certificate}) => {
+const CertModal = ({file}) => {
     const [openCertModal, setOpenCertModal] = useState(false);
 
     const openCertModalHandler = () => {
@@ -40,7 +40,7 @@ const CertModal = ({certificate}) => {
         <React.Fragment>
             <IconButton
                 sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
-                aria-label={`Info about ${certificate.title}.`}
+                aria-label={`Info about ${file.title}.`}
                 onClick={openCertModalHandler}
             >
                 <InfoIcon />
@@ -52,7 +52,7 @@ const CertModal = ({certificate}) => {
                 maxWidth='xl'
             >
                 <DialogTitle sx={{ m: 0, p: 2 }} id="customized-dialog-title">
-                    {certificate.title}
+                    {file.title}
                 </DialogTitle>
                 <IconButton
                     aria-label="close"
@@ -67,11 +67,11 @@ const CertModal = ({certificate}) => {
                     <CloseIcon />
                 </IconButton>
                 <DialogContent dividers>
-                    <ImageListItem key={certificate.title}>
+                    <ImageListItem key={file.title}>
                         <img
-                            srcSet={`${certificate.picture}?auto=format&dpr=2 2x`}
-                            src={`${certificate.picture}?auto=format`}
-                            alt={certificate.title}
+                            srcSet={`${file.picture}?auto=format&dpr=2 2x`}
+                            src={`${file.picture}?auto=format`}
+                            alt={file.title}
                             loading="lazy"
                         />
                     </ImageListItem>
