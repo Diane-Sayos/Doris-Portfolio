@@ -17,11 +17,9 @@ import Paper from '@mui/material/Paper';
 const styles = {
     '.header-section': {
         position: 'sticky',
-        top: '1rem',
+        top: '3rem',
         zIndex: 100,
         backgroundColor: 'white',
-        borderBottomRightRadius: '1rem 0.5rem',
-        borderBottomLeftRadius: '1rem 0.5rem',
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'flex-end',

@@ -25,7 +25,8 @@ const styles = {
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
-        padding: '0.5rem 0.5rem',
+        padding: '0.5rem',
+        height: '3rem',
     },
     '.navbar-section': {
         display: 'flex',
@@ -49,7 +50,7 @@ const styles = {
         fontSize: 16,
         padding: 5,
         alignSelf: 'center',
-        lineHeight: 1.5,
+
         backgroundColor: 'white',
         textDecoration: 'none',
         color: '#7f5539',
