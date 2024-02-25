@@ -39,7 +39,7 @@ const CertModal = ({file}) => {
     return (
         <React.Fragment>
             <IconButton
-                sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
+                sx={{ color: 'rgba(255, 255, 255, 0.54)', cursor: 'pointer'}}
                 aria-label={`Info about ${file.title}.`}
                 onClick={openCertModalHandler}
             >

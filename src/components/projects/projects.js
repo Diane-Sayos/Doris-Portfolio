@@ -4,7 +4,7 @@
 //use modal when clicked ---- show sample pictures of project, && project title as LINK && description
 
 //components
-import Cards from '../reusable/cards';
+import Cards from '../reusable/Cards';
 
 const Projects = () => {
     const projects = [

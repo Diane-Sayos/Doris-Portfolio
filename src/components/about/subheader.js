@@ -23,7 +23,8 @@ const styles = {
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'flex-end',
-        padding: '0.5rem 0.5rem',
+        padding: '0.5rem',
+        borderRadius: 0
     },
     '.navbar-section': {
         padding: 0,

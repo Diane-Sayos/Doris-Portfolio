@@ -2,7 +2,7 @@
 //create modal when clicked --- input bigger picture of the certificate
 
 //components
-import Cards from '../../reusable/cards';
+import Cards from '../../reusable/Cards';
 
 //files
 import one from './1.jpeg';

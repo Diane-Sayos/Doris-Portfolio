@@ -27,6 +27,7 @@ const styles = {
         justifyContent: 'space-between',
         padding: '0.5rem',
         height: '3rem',
+        borderRadius: 0
     },
     '.navbar-section': {
         display: 'flex',
@@ -50,7 +51,6 @@ const styles = {
         fontSize: 16,
         padding: 5,
         alignSelf: 'center',
-
         backgroundColor: 'white',
         textDecoration: 'none',
         color: '#7f5539',
