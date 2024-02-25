@@ -35,8 +35,9 @@ const CertCard = ({file, category}) => {
                         title={file.title}
                         subtitle={file.subtitle}
                         actionIcon={
-                            <CertModal file={file} />
+                            category !== 'techstack'? <CertModal file={file} /> : ''
                         }
+                        position={`${category === 'techstack'? 'below' : 'bottom'}`}
                     />
                 </ImageListItem>
         </Paper>

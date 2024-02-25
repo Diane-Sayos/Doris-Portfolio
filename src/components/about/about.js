@@ -40,42 +40,14 @@ import { useTheme } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
-const styles = {
-    '.MuiTabList-root': {
-        display: 'flex',
-        justifyContent: 'flex-end'
-    }
-}
 
-function TabPanel(props) {
-  const { children, value, index, ...other } = props;
+import TabPanel from '../reusable/TabPanel';
+import Cards from '../reusable/Cards';
 
-  return (
-    <div
-      role="tabpanel"
-      hidden={value !== index}
-      id={`full-width-tabpanel-${index}`}
-      aria-labelledby={`full-width-tab-${index}`}
-      {...other}
-    >
-      {value === index && (
-        <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
-        </Box>
-      )}
-    </div>
-  );
-}
+import { techstacks, certificates } from './information';
 
-function a11yProps(index) {
-  return {
-    id: `full-width-tab-${index}`,
-    'aria-controls': `full-width-tabpanel-${index}`,
-  };
-}
 
 const About = () => {
   const theme = useTheme();
@@ -96,14 +68,14 @@ const About = () => {
           sx={{backgroundColor: '#7f5539'}}
           value={value}
           onChange={handleChange}
-          indicatorColor="white"
+          indicatorColor="#ffffff"
           textColor="inherit"
           variant="fullWidth"
           aria-label="full width tabs example"
         >
-          <Tab label="Item One" {...a11yProps(0)} />
-          <Tab label="Item Two" {...a11yProps(1)} />
-          <Tab label="Item Three" {...a11yProps(2)} />
+          <Tab label="ABOUT" />
+          <Tab label="CERTIFICATIONS" />
+          <Tab label="TECH STACK" />
         </Tabs>
       </AppBar>
       <SwipeableViews
@@ -112,13 +84,13 @@ const About = () => {
         onChangeIndex={handleChangeIndex}
       >
         <TabPanel value={value} index={0} dir={theme.direction}>
-          Item One
+          About
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
-          Item Two
+        <Cards files={certificates} category={'certifications'} />
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
-          Item Three
+          <Cards files={techstacks} category={'techstack'} />
         </TabPanel>
       </SwipeableViews>
     </Box>

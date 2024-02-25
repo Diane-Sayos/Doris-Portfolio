@@ -3,6 +3,7 @@
 //dependencies
 // import { css } from '@emotion/react';
 import React from 'react';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 //components
 import CertCard from './CertCard';
@@ -31,9 +32,10 @@ const styles = {
 
 
 const Cards = ({files, category}) => {
+    const matches = useMediaQuery('(max-width:430px)');
     return (
             <section css={[styles?.[`.${category}-section`], styles]} className={`${category}-section`}>
-                <ImageList sx={{ width: '95%', height: '100%', margin: '0.5rem auto 3rem auto'}} cols={`${category === 'techstack'? 3 : 2}`} gap={10}>
+                <ImageList sx={{ width: '100%', height: '100%'}} cols={`${category === 'techstack' && !matches? 4 : 2}`} gap={10}>
                     {files.map((file, idx) => (
                         <React.Fragment key={idx}>
                             <CertCard file={file} category={category}/>
