@@ -16,6 +16,7 @@ import eleven from './certifications/11.jpeg';
 import twelve from './certifications/12.jpeg';
 import thirteen from './certifications/13.jpeg';
 import fourteen from './certifications/14.jpeg';
+import diploma from './certifications/doris-diploma.png';
 
 //projects images
 
@@ -57,6 +58,12 @@ export const techstacks = [
 
 
 export const certificates = [
+    {
+        picture: diploma,
+        title: "Bachelor of Business Administration",
+        subtitle: "The Bernard M. Baruch College",
+        link: 'https://www.parchment.com/u/award/95242d9b67d15e4ef4daa111b7a78d85'
+    },
     {
         picture: one,
         title: "Introduction to Data visualization with ggplot2",

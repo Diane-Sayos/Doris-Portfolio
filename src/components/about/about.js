@@ -1,39 +1,3 @@
-// /** @jsxImportSource @emotion/react */
-// //dependencies
-// // import { css } from '@emotion/react';
-
-// //components
-
-// //material ui
-
-// //files
-
-// //this is the fun description for doris with hobbies, soft skills, goal
-
-// const styles = {
-//     '.main-section': {
-//         margin: '1rem auto',
-//         display: 'flex',
-//         flexDirection: 'row wrap',
-//         border: '1px solid black',
-//         padding: 10,
-//     },
-//     '.about-section': {
-
-//     },
-// };
-
-
-// const About = () => {
-//     return (
-//         <section css={[styles?.['.main-section'], styles]} className='about-section'>
-//             <h2>About</h2>
-//         </section>
-//     )
-// };
-
-// export default About;
-
 import * as React from 'react';
 import SwipeableViews from 'react-swipeable-views';
 import { useTheme } from '@mui/material/styles';
@@ -87,7 +51,7 @@ const About = () => {
           About
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
-        <Cards files={certificates} category={'certifications'} />
+          <Cards files={certificates} category={'certifications'} />
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
           <Cards files={techstacks} category={'techstack'} />
