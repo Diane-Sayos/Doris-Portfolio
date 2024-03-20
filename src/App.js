@@ -1,6 +1,6 @@
 import './App.css';
 //main template --- header, main section, footer
-import Root from './components/Root';
+import Root from './components/Root.js';
 //main sections
 
 //Home  --- About, Techstack, Certifications
