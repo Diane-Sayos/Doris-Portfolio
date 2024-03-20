@@ -1,16 +1,18 @@
 import './App.css';
 //main template --- header, main section, footer
-import Root from './components/root';
-//components for main section
-import Projects from './components/projects/projects';
-//components for about section
-import About from './components/about/about';
+import Root from './components/Root';
+//main sections
+
+//Home  --- About, Techstack, Certifications
+import Home from './components/Home/Home';
+import Projects from './components/Projects';
+
 
 import { RouterProvider, Route, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 
 const appRouter = createBrowserRouter(createRoutesFromElements(
   <Route path='/' element={ <Root /> }>
-    <Route path='/' element={ <About /> } />
+    <Route path='/' element={ <Home /> } />
     <Route path='/projects' element={ <Projects /> } />
   </Route>
 ));

@@ -2,21 +2,21 @@
 import cat from '../header/catpic.jpeg';
 
 //certificate images
-import one from './certifications/1.jpeg';
-import two from './certifications/2.jpeg';
-import three from './certifications/3.jpeg';
-import four from './certifications/4.jpeg';
-import five from './certifications/5.jpeg';
-import six from './certifications/6.jpeg';
-import seven from './certifications/7.jpeg';
-import eight from './certifications/8.jpeg';
-import nine from './certifications/9.jpeg';
-import ten from './certifications/10.jpeg';
-import eleven from './certifications/11.jpeg';
-import twelve from './certifications/12.jpeg';
-import thirteen from './certifications/13.jpeg';
-import fourteen from './certifications/14.jpeg';
-import diploma from './certifications/doris-diploma.png';
+import one from '../../images/certifications/1.jpeg';
+import two from '../../images/certifications/2.jpeg';
+import three from '../../images/certifications/3.jpeg';
+import four from '../../images/certifications/4.jpeg';
+import five from '../../images/certifications/5.jpeg';
+import six from '../../images/certifications/6.jpeg';
+import seven from '../../images/certifications/7.jpeg';
+import eight from '../../images/certifications/8.jpeg';
+import nine from '../../images/certifications/9.jpeg';
+import ten from '../../images/certifications/10.jpeg';
+import eleven from '../../images/certifications/11.jpeg';
+import twelve from '../../images/certifications/12.jpeg';
+import thirteen from '../../images/certifications/13.jpeg';
+import fourteen from '../../images/certifications/14.jpeg';
+import diploma from '../../images/certifications/doris-diploma.png';
 
 //projects images
 

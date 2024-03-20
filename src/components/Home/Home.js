@@ -11,10 +11,10 @@ import TabPanel from '../reusable/TabPanel';
 import Cards from '../reusable/Cards';
 import AboutTabPanel from './AboutTabPanel';
 
-import { techstacks, certificates } from './information';
+import { techstacks, certificates } from '../reusable/information';
 
 
-const About = () => {
+const Home = () => {
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
 
@@ -62,4 +62,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Home;

@@ -6,7 +6,7 @@ import { css } from '@emotion/react';
 import { NavLink } from 'react-router-dom';
 
 //components
-import Contact from '../contact';
+import Contact from '../Contact';
 
 //material ui
 import Avatar from '@mui/material/Avatar';
