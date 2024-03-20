@@ -4,8 +4,8 @@ import Root from './Root.js';
 //main sections
 
 //Home  --- About, Techstack, Certifications
-import Home from './components/Home/Home';
-import Projects from './components/Projects';
+import Home from './Home/Home.js';
+import Projects from './Projects.js';
 
 
 import { RouterProvider, Route, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
