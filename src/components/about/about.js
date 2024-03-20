@@ -9,6 +9,7 @@ import Box from '@mui/material/Box';
 
 import TabPanel from '../reusable/TabPanel';
 import Cards from '../reusable/Cards';
+import AboutTabPanel from './AboutTabPanel';
 
 import { techstacks, certificates } from './information';
 
@@ -48,7 +49,7 @@ const About = () => {
         onChangeIndex={handleChangeIndex}
       >
         <TabPanel value={value} index={0} dir={theme.direction}>
-          About
+          <AboutTabPanel />
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
           <Cards files={certificates} category={'certifications'} />
