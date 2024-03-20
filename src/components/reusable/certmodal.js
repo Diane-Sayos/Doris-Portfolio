@@ -15,6 +15,8 @@ import IconButton from '@mui/material/IconButton';
 import InfoIcon from '@mui/icons-material/Info';
 import CloseIcon from '@mui/icons-material/Close';
 import ImageListItem from '@mui/material/ImageListItem';
+import Typography from '@mui/material/Typography';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
 //files
 
@@ -75,6 +77,7 @@ const CertModal = ({file}) => {
                             loading="lazy"
                         />
                     </ImageListItem>
+                    <Typography sx={{textAlign: "center"}}><a href={file.link} target="_blank" rel="noreferrer" style={{textDecoration: 'none', color: 'black'}}>Click here to see the actual certificate from {file.subtitle}!<OpenInNewIcon /></a></Typography>
                 </DialogContent>
             </BootstrapDialog>
         </React.Fragment>

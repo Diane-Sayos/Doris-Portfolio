@@ -82,8 +82,8 @@ const Header = () => {
                 </h3>
             </div>
             <nav className='navbar-section'>
+
                 <NavLink to='/' onClick={() => setActiveNav('/')} className={activeNav === '/' ? 'navbar-link-selected' : 'navbar-link'}>HOME</NavLink>
-                <NavLink to='/about' onClick={() => setActiveNav('/about')} className={activeNav === '/about' ? 'navbar-link-selected' : 'navbar-link'}>ABOUT</NavLink>
                 <NavLink to='/projects' onClick={() => setActiveNav('/projects')} className={activeNav === '/projects' ? 'navbar-link-selected' : 'navbar-link'}>PROJECTS</NavLink>
                 <Contact />
             </nav>
