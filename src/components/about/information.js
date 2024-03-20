@@ -65,6 +65,12 @@ export const certificates = [
         link: 'https://www.parchment.com/u/award/95242d9b67d15e4ef4daa111b7a78d85'
     },
     {
+        picture: fourteen,
+        title: "MongoDB Basics",
+        subtitle: "MongoDB University",
+        link: 'https://university.mongodb.com/course_completion/a77a3d41-36c7-4161-9af4-acecc6ba09f7'
+    },
+    {
         picture: one,
         title: "Introduction to Data visualization with ggplot2",
         subtitle: "datacamp",
@@ -141,12 +147,6 @@ export const certificates = [
         title: "Intermediate R",
         subtitle: "datacamp",
         link: 'https://www.datacamp.com/statement-of-accomplishment/course/1a707d98a63d334ab75db7c7dab44982c76ff928'
-    },
-    {
-        picture: fourteen,
-        title: "MongoDB Basics",
-        subtitle: "MongoDB University",
-        link: 'https://university.mongodb.com/course_completion/a77a3d41-36c7-4161-9af4-acecc6ba09f7'
     }
 ];
 
